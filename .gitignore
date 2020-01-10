@@ -245,3 +245,4 @@ $RECYCLE.BIN/
 package-lock.json
 
 .idea
+yarn.lock
