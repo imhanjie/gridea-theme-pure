@@ -1,0 +1,256 @@
+@import './lib/modern-normalize';
+@import './lib/colors';
+@import './abstracts/varibles';
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  vertical-align: baseline;
+}
+
+html {
+  font-size: 58%;
+}
+
+body {
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, opensans, Optima, 'Microsoft Yahei', sans-serif;
+  font-size: 16px;
+  letter-spacing: 1.0382px;
+}
+
+button {
+  outline: none !important;
+}
+
+a {
+  text-decoration: none !important;
+  transition: all 0.3s;
+  //&:hover {
+  //  color: white;
+  //}
+}
+
+body, div, a, p, ul, li, ol, h1, h2, h3, h4, h5, h6, table, tr, td {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ol {
+  li {
+    list-style: decimal;
+    font-size: 16px;
+  }
+}
+
+ul {
+  li {
+    list-style: disc;
+    font-size: 16px;
+  }
+}
+
+.main {
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+
+  .main-content {
+    flex: 1;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+}
+
+// 自定义 post 样式
+.gt-post-content {
+  word-break: break-all;
+  word-wrap: break-word;
+
+  a {
+    transition: all 0.3s;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    border-radius: 2px;
+    margin: 18px auto;
+  }
+
+  p {
+    line-height: 1.725;
+    margin-bottom: 18px;
+    font-size: 16px;
+    letter-spacing: 1.0382px;
+  }
+
+  pre {
+    margin-bottom: 18px;
+  }
+
+  blockquote {
+    padding: 16px;
+    border-left: 4px;
+    border-style: solid;
+    margin-bottom: 16px;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    margin: 1rem 0;
+    display: block;
+    overflow-x: auto;
+  }
+
+  tr {
+    border-top: 1px solid #dfe2e5;
+  }
+
+  td, th {
+    border: 1px solid #dfe2e5;
+    padding: .6em 1em;
+  }
+
+  ul, ol {
+    padding-left: 20px;
+    line-height: 1.725;
+    margin-bottom: 16px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 18px;
+    padding-top: 14px;
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
+  h6 {
+    font-size: 14px;
+  }
+
+  p, li {
+    code {
+      padding: 0 6px;
+      margin: 0 3px;
+      font-size: 13px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+  }
+
+  pre {
+    margin-bottom: 18px;
+
+    code {
+      font-size: 13px;
+      font-family: Menlo, Monaco, 'Source Code Pro', Consolas, 'Courier New', monospace;
+      padding: 1em;
+      border-radius: 5px;
+      line-height: 1.375;
+      width: 100%;
+      overflow: scroll;
+    }
+  }
+}
+
+.gt-fr {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.gt-fc {
+  display: flex;
+  flex-direction: column;
+}
+
+
+//.gt-bg-theme-color-first {
+//  background: @theme-color-first;
+//}
+//
+//.gt-bg-them-color-second {
+//  background: @theme-color-second;
+//}
+//
+//.gt-bg-content-color-first {
+//  background: @content-color-first;
+//}
+//
+//.gt-bg-content-color-second {
+//  background: @content-color-second;
+//}
+//
+//.gt-bg-accent-color-first {
+//  background: @accent-color-first;
+//}
+//
+//.gt-bg-accent-color-second {
+//  background: @accent-color-second;
+//}
+//
+//.gt-c-theme-color-first {
+//  color: @theme-color-first;
+//}
+//
+//.gt-c-them-color-second {
+//  color: @theme-color-second;
+//}
+//
+//.gt-c-content-color-first {
+//  color: @content-color-first;
+//}
+//
+//.gt-c-content-color-second {
+//  color: @content-color-second;
+//}
+//
+//.gt-c-accent-color-first {
+//  color: @accent-color-first;
+//}
+//
+//.gt-c-accent-color-second {
+//  color: @accent-color-second;
+//}
+
+@import "./components/header.less";
+@import "./components/home.less";
+@import "./components/post.less";
+@import "./components/archives.less";
+@import "./components/tags.less";
+@import "./components/tag.less";
+@import "./components/about.less";
+@import "./components/footer.less";
+@import "./lib/highlight.less";
+@import "./lib/katex.less";

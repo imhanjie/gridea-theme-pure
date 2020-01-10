@@ -1,0 +1,55 @@
+<html>
+<head>
+    <%- include('./includes/head', { siteTitle: `${post.title} | ${themeConfig.siteName}` }) %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <%- include('./includes/header') %>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    <%= post.title %>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · <%= post.dateFormat %> ·
+                    </time>
+                    <% post.tags.forEach(function(tag) { %>
+                        <a href="<%= tag.link %>" class="post-tags">
+                            # <%= tag.name %>
+                        </a>
+                    <% }); %>
+                </div>
+                <div class="post-content">
+                    <%- post.content %>
+                </div>
+            </article>
+        </div>
+
+        <% if (post.nextPost && !post.hideInList) { %>
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="<%= post.nextPost.link %>" class="post-title gt-a-link">
+                    <%= post.nextPost.title %>
+                </a>
+            </div>
+        <% } %>
+
+        <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
+            <% if (commentSetting.commentPlatform === 'gitalk') { %>
+                <%- include('./includes/gitalk') %>
+            <% } %>
+
+            <% if (commentSetting.commentPlatform === 'disqus') { %>
+                <%- include('./includes/disqus') %>
+            <% } %>
+        <% } %>
+
+        <%- include('./includes/footer') %>
+
+    </div>
+</div>
+</body>
+</html>

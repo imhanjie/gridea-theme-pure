@@ -1,0 +1,17 @@
+<div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first"><%- themeConfig.siteDescription %></div>
+    <div class="social-container">
+        <% ['github', 'twitter', 'weibo', 'zhihu', 'dribbble', 'facebook'].forEach((item) => { %>
+            <% if (site.customConfig[item]) { %>
+                <a href="<%= site.customConfig[item] %>" target="_blank">
+                    <i class="fab fa-<%= item %> gt-c-content-color-first"></i>
+                </a>
+            <% } %>
+        <% }) %>
+    </div>
+    <%- themeConfig.footerInfo %> | <a href="<%= themeConfig.domain %>/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+    hljs.initHighlightingOnLoad()
+</script>

@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            <%= themeConfig.siteName %>
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            <% menus.forEach(function(menu) { %>
+                <div class="nav-item">
+                    <% if (menu.openType === 'External') { %>
+                        <a href="<%= menu.link %>" class="menu gt-a-link" target="_blank">
+                            <%= menu.name %>
+                        </a>
+                    <% } else { %>
+                        <a href="<%= menu.link %>" class="menu gt-a-link">
+                            <%= menu.name %>
+                        </a>
+                    <% } %>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,21 @@
+<html>
+<head>
+    <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <div class="main-content">
+        <%- include('./includes/header') %>
+
+        <div class="tags-container">
+            <% tags.forEach((tag) => { %>
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="<%= tag.link %>">#<%= tag.name %></a>
+            <% }); %>
+        </div>
+
+        <%- include('./includes/footer') %>
+    </div>
+</div>
+</body>
+</html>

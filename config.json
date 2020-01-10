@@ -1,0 +1,141 @@
+{
+  "name": "Pure",
+  "version": "0.0.1",
+  "author": "Melody",
+  "customConfig": [
+    {
+      "name": "skin",
+      "label": "皮肤",
+      "group": "皮肤",
+      "value": "black",
+      "type": "select",
+      "options": [
+        {
+          "label": "暗夜黑",
+          "value": "black"
+        },
+        {
+          "label": "简约白",
+          "value": "white"
+        },
+        {
+          "label": "银光灰",
+          "value": "gray"
+        },
+        {
+          "label": "墨草绿",
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "name": "isEnabledCustomColor",
+      "label": "开启个性化",
+      "group": "个性化",
+      "type": "switch",
+      "value": false,
+      "note": "开启后默认皮肤将失效"
+    },
+    {
+      "name": "ctf",
+      "label": "主背景色",
+      "group": "个性化",
+      "value": "#ffffff",
+      "type": "input",
+      "card": "color",
+      "note": "页面背景色等"
+    },
+    {
+      "name": "cts",
+      "label": "次背景色",
+      "group": "个性化",
+      "value": "#dddddd",
+      "type": "input",
+      "card": "color",
+      "note": "首页文章列表背景色、文章详情页背景色等"
+    },
+    {
+      "name": "ccf",
+      "label": "主文字颜色",
+      "group": "个性化",
+      "value": "#5f6169",
+      "type": "input",
+      "card": "color",
+      "note": "Logo、文章内容文字颜色等"
+    },
+    {
+      "name": "ccs",
+      "label": "次要文字颜色",
+      "group": "个性化",
+      "value": "#999fa7",
+      "type": "input",
+      "card": "color",
+      "note": "首页文章列表摘要字体颜色等"
+    },
+    {
+      "name": "caf",
+      "label": "主强调色",
+      "group": "个性化",
+      "value": "#84fab0",
+      "type": "input",
+      "card": "color",
+      "note": "超链接、标签颜色等"
+    },
+    {
+      "name": "github",
+      "label": "Github",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
+      "name": "twitter",
+      "label": "Twitter",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
+      "name": "weibo",
+      "label": "微博",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
+      "name": "zhihu",
+      "label": "知乎",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
+      "name": "dribbble",
+      "label": "Dribbble",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
+      "name": "facebook",
+      "label": "Facebook",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
+      "name": "customCss",
+      "label": "自定义CSS",
+      "group": "自定义样式",
+      "value": "",
+      "type": "textarea",
+      "note": ""
+    }
+  ]
+}

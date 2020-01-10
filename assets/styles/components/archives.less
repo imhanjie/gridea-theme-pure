@@ -1,0 +1,31 @@
+.archives-container {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+
+  .year {
+    font-size: 34px;
+    font-weight: bold;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    align-self: start;
+  }
+
+  .post {
+    padding: 16px 0;
+
+    .post-title {
+      font-size: 16px;
+
+      small {
+        font-size: 80%;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .archives-container {
+    padding: 16px;
+  }
+}
