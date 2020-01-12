@@ -6,11 +6,6 @@ const generateOverride = (params = {}) => {
             'white': '#ffffff',
             'gray': '#f9f9f9',
             'green': '#e6eceb',
-            'test1': '#f9f9f9',
-            'test2': '#f3f3f3',
-            'test3': '#5e5e5e',
-            'test4': '#bfbfbf',
-            'test5': '#7b848d',
         },
         'theme-color-second': {
             'black': '#1d1e1f',

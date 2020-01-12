@@ -1,27 +1,44 @@
-# Gridea 主题开发样板
+## 介绍
 
-**项目各文件夹内已写 README，开发主题前敬请阅读！**
+一款专为 Gridea 设计的主题，默认内置 "简约白"、"暗夜黑"、"银光灰"、"墨草绿" 4 种配色方案。另外还：
 
-## 开发
-```
-$ yarn install
-$ yarn run dev
+- 支持自定义配色。
+- 移动端页面适配。
+- 支持社交信息设置。
+- 支持谷歌统计。
+- 自定义 CSS 样式。
 
-```
 
-`/assets`、`/templates` 必须，Gridea 使用主题时必须文件夹  
-`config.json` 可选，主题信息和自定义配置字段信息  
-`style-override.js` 可选，根据自定义配置信息生成 css 方法文件  
-`/images` 文件夹仅为预览渲染 avatar 所用  
 
-Mock 数据来源：https://github.com/getgridea/mock-json
+## 安装
 
-Gridea 主题开发支持 less，若不熟悉 less 语法，尽可使用 css 语法编写，只不过文件名需要保持 `main.less`
+使用 `git clone` 本项目到 Gridea 站点源文件路径的 `themes` 目录内，或者前往 release 页面 https://github.com/imhanjie/gridea-theme-pure/releases 下载最新的 release 解压到 Gridea 站点源文件路径的 `themes` 目录内，然后**重启  Gridea** 即可。
 
-网页链接仅为预览效果所用
+>  Gridea 站点源文件路径：可在 Gridea 客户端设置页面查看。
 
-主题开发文档：https://gridea.dev/docs/theme.html
 
-欢迎开发 Gridea 主题！
 
-😘 Enjoy~
+## 预览
+
+示例站点：https://imhanjie.com/
+
+![](https://tva1.sinaimg.cn/large/006tNbRwly1gaqcu0b03bj31vh0u0avx.jpg)
+
+
+
+![](https://tva1.sinaimg.cn/large/006tNbRwly1gaqcutvj86j32vl0u04e4.jpg)
+
+
+
+![](https://tva1.sinaimg.cn/large/006tNbRwly1gaqcvc3pjkj32vl0u0aq5.jpg)
+
+
+
+![](https://tva1.sinaimg.cn/large/006tNbRwly1gaqcvhp5mdj32vl0u04cw.jpg)
+
+
+
+## 感谢
+
+- [Gridea - 一个静态博客写作客户端](https://gridea.dev/)
+- [gridea-theme-starter](https://github.com/getgridea/gridea-theme-starter)
