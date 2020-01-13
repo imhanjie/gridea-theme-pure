@@ -137,15 +137,7 @@ const generateOverride = (params = {}) => {
           border-color: ${colors["accent-color-first"][params.skin]}!important;
         }
         
-        .gt-post-content .hljs {
-          background: ${colors["accent-color-second"][params.skin]}!important;
-        }
-        
         .gt-post-content code {
-          background: ${colors["accent-color-second"][params.skin]}!important;
-        }
-        
-        .gt-post-content pre code {
           background: ${colors["accent-color-second"][params.skin]}!important;
         }
          `;
