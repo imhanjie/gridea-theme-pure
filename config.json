@@ -2,6 +2,7 @@
   "name": "Pure",
   "version": "1.0.2",
   "author": "imhanjie",
+  "repository": "https://github.com/imhanjie/gridea-theme-pure",
   "customConfig": [
     {
       "name": "skin",
