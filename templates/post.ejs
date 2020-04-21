@@ -46,9 +46,12 @@
                 <%- include('./includes/disqus') %>
             <% } %>
         <% } %>
+		
+		<% if(typeof site.customConfig['valine']!=='undefined' && site.customConfig['valine']) { %>
+			<%- include('./includes/valine') %>
+		<% } %>
 
         <%- include('./includes/footer') %>
-
     </div>
 </div>
 </body>
