@@ -250,6 +250,14 @@
       "note": "是否记录评论者IP"
     },
     {
+      "name": "visitor",
+      "label": "记录文章访问量",
+      "group": "valine评论系统",
+      "type": "switch",
+      "value": false,
+      "note": "是否记录文章访问量"
+    },
+    {
       "name": "placeholder",
       "label": "占位提示符",
       "group": "valine评论系统",
