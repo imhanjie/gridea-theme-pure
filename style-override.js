@@ -50,7 +50,9 @@ const generateOverride = (params = {}) => {
     }
 
     console.log('current theme: ' + params.skin)
-
+    if (!params.skin) {
+        params.skin = 'black'
+    }
     result += `
         .gt-bg-theme-color-first {
           background: ${colors["theme-color-first"][params.skin]}!important;
