@@ -37,6 +37,13 @@
             </div>
         <% } %>
 
+        <% if(site.customConfig['valine'] && site.customConfig['visitor']) { %>
+            <span id="/<%= post.link.split('/')[3] %>/" class="leancloud_visitors" data-flag-title="<%= post.title %>">
+                <em class="post-meta-item-text">阅读量 </em>
+                <i class="leancloud-visitors-count">0</i>
+            </span>
+        <% } %>
+
         <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
             <% if (commentSetting.commentPlatform === 'gitalk') { %>
                 <%- include('./includes/gitalk') %>
@@ -46,10 +53,10 @@
                 <%- include('./includes/disqus') %>
             <% } %>
         <% } %>
-		
-		<% if(typeof site.customConfig['valine']!=='undefined' && site.customConfig['valine']) { %>
-			<%- include('./includes/valine') %>
-		<% } %>
+
+        <% if(typeof site.customConfig['valine']!=='undefined' && site.customConfig['valine']) { %>
+            <%- include('./includes/valine') %>
+        <% } %>
 
         <%- include('./includes/footer') %>
     </div>
