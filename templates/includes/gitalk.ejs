@@ -33,8 +33,8 @@
     repo: '<%= commentSetting.gitalkSetting.repository %>',
     owner: '<%= commentSetting.gitalkSetting.owner %>',
     admin: ['<%= commentSetting.gitalkSetting.owner %>'],
-    id: location.pathname,      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
+    id: md5(location.pathname),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false       // Facebook-like distraction free mode
   })
 
   gitalk.render('gitalk-container')
