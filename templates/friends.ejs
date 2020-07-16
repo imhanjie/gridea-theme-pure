@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <%- include('./includes/head', { siteTitle: `友情链接 - ${themeConfig.siteName}` }) %>
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-content">
+            <%- include('./includes/header') %>
+            <div class="post-container">
+                <div class="post-detail gt-bg-theme-color-second">
+                    <article class="gt-post-content">
+                        <h2 class="post-title">友情链接</h2>
+
+                        <!-- <div class="post-content-wrapper"> -->
+                            <div class="post-content">
+                                <% if (site.customConfig.friends) { %>
+                                    <% site.customConfig.friends.forEach(function(friend) { %>
+                                        <div class="friend-box">
+                                            <img class="friend-avatar" src="<%= friend.siteLogo %>">
+                                            <div class="flink-info">
+                                                <a href="<%= friend.siteLink %>" target="_blank"><%= friend.siteName %></a>
+                                                <br />
+                                                <div class="flink-info-desc">
+                                                    <%= friend.description %>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <% }); %>
+                                <% } else { %>
+                                    暂无友链，快来申请吧！
+                                <% } %>
+                            </div>
+                        <!-- </div> -->
+                    </article>
+                </div>
+                <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
+                    <% if (commentSetting.commentPlatform === 'gitalk') { %>
+                        <%- include('./includes/gitalk') %>
+                    <% } %>
+        
+                    <% if (commentSetting.commentPlatform === 'disqus') { %>
+                        <%- include('./includes/disqus') %>
+                    <% } %>
+                <% } %>
+            </div>
+
+            
+
+            <%- include('./includes/footer') %>
+        </div>
+    </div>
+</body>
+
+</html>
