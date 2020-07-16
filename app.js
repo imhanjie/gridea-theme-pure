@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
  * Home Page & Post List Page
  */
 app.get('/', async (req, res) => {
-    const response = await axios.get('https://coding.net/u/bluehan/p/mock-json/git/raw/master/list.json')
+    const response = await axios.get('https://raw.githubusercontent.com/getgridea/mock-json/master/list.json')
     res.render('index', {...response.data})
 })
 
@@ -22,7 +22,7 @@ app.get('/', async (req, res) => {
  * Post Page
  */
 app.get('/post/:postName', async (req, res) => {
-    const response = await axios.get('https://coding.net/u/bluehan/p/mock-json/git/raw/master/post.json')
+    const response = await axios.get('https://raw.githubusercontent.com/getgridea/mock-json/master/post.json')
     res.render('post', {...response.data})
 })
 
@@ -30,7 +30,7 @@ app.get('/post/:postName', async (req, res) => {
  * Archives Page
  */
 app.get('/archives', async (req, res) => {
-    const response = await axios.get('https://coding.net/u/bluehan/p/mock-json/git/raw/master/archives.json')
+    const response = await axios.get('https://raw.githubusercontent.com/getgridea/mock-json/master/archives.json')
     res.render('archives', {...response.data})
 })
 
@@ -38,7 +38,7 @@ app.get('/archives', async (req, res) => {
  * tags Page
  */
 app.get('/tags', async (req, res) => {
-    const response = await axios.get('https://coding.net/u/bluehan/p/mock-json/git/raw/master/tags.json')
+    const response = await axios.get('https://raw.githubusercontent.com/getgridea/mock-json/master/tags.json')
     res.render('tags', {...response.data})
 })
 
@@ -46,7 +46,7 @@ app.get('/tags', async (req, res) => {
  * tag Page
  */
 app.get('/tag/:tagName', async (req, res) => {
-    const response = await axios.get('https://coding.net/u/bluehan/p/mock-json/git/raw/master/tag.json')
+    const response = await axios.get('https://raw.githubusercontent.com/getgridea/mock-json/master/tag.json')
     res.render('tag', {...response.data})
 })
 
