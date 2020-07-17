@@ -280,6 +280,20 @@
       "value": "",
       "type": "input",
       "note": "UA-xxxxxxxxx-x"
+    },
+    {
+      "name": "friends",
+      "label": "友链",
+      "group": "友链",
+      "type": "array",
+      "value": [],
+      "arrayItems": [
+        { "label": "名称", "name": "siteName", "type": "input", "value": "" },
+        { "label": "链接", "name": "siteLink", "type": "input", "value": "" },
+        { "label": "Logo", "name": "siteLogo", "type": "picture-upload", "value": "" },
+        { "label": "描述", "name": "description", "type": "textarea", "value": "" }
+      ],
+      "note": ""
     }
   ]
 }
