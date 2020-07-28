@@ -1,0 +1,42 @@
+<%- outputInfo();%><%  -%>
+<%
+function refineInfo(str){
+   return str.replace(/(<(\/?)(\w+)[^>]*>)|(<!--[\s\S]*?-->)/g ,'')//去除html标签如<p></p>和注释
+   .replace(/\s+/g,' ')//压缩空格换行等只保留一个空格
+}
+
+function outputInfo(){
+   //全站信息
+   let siteInfo={
+      posts:[],//必选，不可更改
+      tags:site.tags,
+      menus:site.menus,
+      themeConfig:site.themeConfig,
+      customConfig:site.customConfig,
+      utils:site.utils//必选，不可更改
+   };
+site.posts.forEach(function(post, index){
+   if(!post.hideInList){//排除隐藏文章
+     //文章信息
+      let postInfo={
+         //content:post.content,//防止文件过大，尽量不选，在./api-content.ejs中已包含
+         fileName:post.fileName,
+         abstract:post.abstract,
+         description:refineInfo(post.description),
+         title:post.title,
+         tags:post.tags,
+         feature:post.feature,
+         link:post.link,
+         stats:post.stats,
+         isTop:post.isTop,
+         toc:post.toc,
+         date:post.date,
+         dateFormat:post.dateFormat
+      };
+      siteInfo.posts.push(postInfo);
+   }
+})
+
+return JSON.stringify(siteInfo);
+}
+%>

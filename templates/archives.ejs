@@ -3,14 +3,19 @@
     <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
 </head>
 <body>
-<div class="main gt-bg-theme-color-first">
+<div class="main">
     <div class="main-content">
         <%- include('./includes/header') %>
-
+        <div class="post-container">
+            <div class="post-detail gt-bg-theme-color-first">
+                <article class="gt-post-content">
+                    <h2 class="post-title">归档</h2>
         <%- include('./includes/post-list-archives') %>
 
         <%- include('./includes/pagination') %>
-
+    </article>
+</div>
+</div>
         <%- include('./includes/footer') %>
     </div>
 </div>
