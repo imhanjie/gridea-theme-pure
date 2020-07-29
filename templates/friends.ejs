@@ -11,10 +11,14 @@
             <div class="post-container">
                 <div class="post-detail gt-bg-theme-color-second">
                     <article class="gt-post-content">
-                        <h2 class="post-title">以下是我的朋友们呀，很高兴遇见你们！🤝</h2>
+                        <h2 class="post-title">友情链接</h2>
 
                         <!-- <div class="post-content-wrapper"> -->
                             <div class="post-content">
+                                <div class="friends-desc">
+                                    <%- site.customConfig.descfriend %>
+                                </div>
+                                <h3 id="linklist">友链列表</h3>
                                 <% if (site.customConfig.friends) { %>
                                     <% site.customConfig.friends.forEach(function(friend) { %>
                                         <div class="friend-box">
