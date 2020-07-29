@@ -290,10 +290,18 @@
       "arrayItems": [
         { "label": "名称", "name": "siteName", "type": "input", "value": "" },
         { "label": "链接", "name": "siteLink", "type": "input", "value": "" },
-        { "label": "Logo", "name": "siteLogo", "type": "picture-upload", "value": "" },
+        { "label": "Logo", "name": "siteLogo", "type": "input", "value": "" },
         { "label": "描述", "name": "description", "type": "textarea", "value": "" }
       ],
       "note": ""
+    },
+    {
+      "name": "descfriend",
+      "label": "页面描述",
+      "group": "友链",
+      "type": "markdown",
+      "value": "",
+      "note": "友链页面的描述信息（Markdown 格式）"
     }
   ]
 }
