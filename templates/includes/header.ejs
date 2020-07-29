@@ -6,28 +6,29 @@
         </div>
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="navbar-nav mr-auto" style="text-align: center">
             <% menus.forEach(function(menu) { %>
-            <div class="nav-item">
-                <% if (menu.openType === 'External') { %>
-                <a href="<%= menu.link %>" class="menu gt-a-link" target="_blank">
-                    <%= menu.name %>
-                </a>
-                <% } else { %>
-                <a href="<%= menu.link %>" class="menu gt-a-link">
-                    <%= menu.name %>
-                </a>
-                <% } %>
-            </div>
+                <div class="nav-item">
+                    <% if (menu.openType === 'External') { %>
+                        <a href="<%= menu.link %>" class="menu gt-a-link" target="_blank">
+                            <%= menu.name %>
+                        </a>
+                    <% } else { %>
+                        <a href="<%= menu.link %>" class="menu gt-a-link">
+                            <%= menu.name %>
+                        </a>
+                    <% } %>
+                </div>
             <% }); %>
         </div>
         <div style="text-align: center">
-            <form id="gridea-search-form" data-update="<%=site.utils.now%>" action="/search/index.html"><input
-                    class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="在这里搜索哦！" />
+            <form id="gridea-search-form" style="position: relative" data-update="<%=site.utils.now%>" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
             </form>
         </div>
     </div>

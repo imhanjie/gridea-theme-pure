@@ -142,6 +142,15 @@ const generateOverride = (params = {}) => {
         .gt-post-content code {
           background: ${colors["accent-color-second"][params.skin]}!important;
         }
+        
+        input::placeholder {
+          color: ${colors["content-color-second"][params.skin]}!important;
+        }
+        
+        .search-input {
+          color: ${colors["content-color-first"][params.skin]}!important;
+          background-color: ${colors["theme-color-second"][params.skin]}!important;
+        }
          `;
     if (params.customCss) {
         result += `
