@@ -302,6 +302,14 @@
       "type": "markdown",
       "value": "",
       "note": "友链页面的描述信息（Markdown 格式）"
+    },
+    {
+      "name": "about",
+      "label": "关于",
+      "group": "关于",
+      "type": "markdown",
+      "value": "",
+      "note": "关于页面的内容（Markdown 格式）"
     }
   ]
 }
