@@ -9,15 +9,17 @@
             <% } %>
         <% }) %>
     </div>
-    <div class="footer-info">
-        <%- themeConfig.footerInfo %>
-    </div>
     <div>
+        <span style="text-align: right; float: right;">
         Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
                 href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="<%= themeConfig.domain %>/atom.xml" target="_blank">RSS</a></a>
+        </span>
+        <span style="text-align: left;">
+            <%- themeConfig.footerInfo %>
+        </span>
     </div>
 </div>
 
 <script>
-    hljs.initHighlightingOnLoad()
+    hljs.initHighlightingOnLoad();
 </script>
