@@ -1,26 +1,34 @@
-<div class="post-container">
-  <% posts.forEach(function(post) { %>
-    <article class="post">
-      <a href="<%= post.link %>">
-        <h2 class="post-title"><%= post.title %></h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · <%= post.dateFormat %> ·
-        </time>
-        <% post.tags.forEach(function(tag) { %>
-          <a href="<%= tag.link %>" class="post-tag">
-            # <%= tag.name %>
+<div class="post-list-container">
+  <div class="post-inner">
+    <% posts.forEach(function(post) { %>
+      <div class="post gt-bg-theme-color-second">
+        <div class="post-left">
+          <a href="<%= post.link %>">
+            <div>
+              <!-- <a href="<%= post.link %>"> -->
+              <span class="post-title gt-c-content-color-first"><%= post.title %></span>
+              <!-- </a> -->
+            </div>
+            <div class="gt-post-content post-abstract gt-c-content-color-second">
+              <p><%- post.searchedPreview %></p>
+            </div>
           </a>
-        <% }); %>
+          <div class="post-info">
+            <time class="post-time gt-c-content-color-first">
+              · <%= post.dateFormat %> ·
+            </time>
+            <% post.tags.forEach(function(tag) { %>
+              <a href="<%= tag.link %>" class="post-tag">
+                # <%= tag.name %>
+              </a>
+            <% }); %>
+          </div>
+        </div>
+        <% if (themeConfig.showFeatureImage && post.feature) { %>
+          <!-- <a href="<%= post.link %>" class="post-feature-image" style="background-image: url('<%= post.feature %>')"></a> -->
+          <a href="<%= post.link %>" class="post-feature-image" style="background-image: url('<%= featureImg(post.feature) %>')"></a>
+        <% } %>
       </div>
-      <% if (themeConfig.showFeatureImage && post.feature) { %>
-        <a href="<%= post.link %>" class="post-feature-image" style="background-image: url('<%= post.feature %>')">
-        </a>
-      <% } %>
-      <div class="post-abstract">
-        <%- post.searchedPreview %>
-      </div>
-    </article>
-  <% }); %>
+    <% }); %>
+  </div>
 </div>
