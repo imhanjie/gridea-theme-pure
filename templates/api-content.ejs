@@ -1,0 +1,24 @@
+<%- outputContent();%><%  -%>
+<%
+function refineContent(str){
+   return str.replace(/(<(\/?)(\w+)[^>]*>)|(<!--[\s\S]*?-->)/g ,'')//去除html标签如<p></p>和注释
+   .replace(/\s+/g,' ')//压缩空格换行等只保留一个空格
+}
+
+function outputContent(){
+let articlesContent={
+   posts:[]
+};
+site.posts.forEach(function(post, index){
+   if(!post.hideInList){
+      let postContent={
+         title:post.title,
+         content:refineContent(post.content),
+         link:post.link
+      };
+      articlesContent.posts.push(postContent);
+   }
+})
+return JSON.stringify(articlesContent);
+}
+%>

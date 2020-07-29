@@ -11,7 +11,7 @@
             <div class="post-container">
                 <div class="post-detail gt-bg-theme-color-second">
                     <article class="gt-post-content">
-                        <h2 class="post-title">友情链接</h2>
+                        <h2 class="post-title">以下是我的朋友们呀，很高兴遇见你们！🤝</h2>
 
                         <!-- <div class="post-content-wrapper"> -->
                             <div class="post-content">
@@ -20,7 +20,13 @@
                                         <div class="friend-box">
                                             <img class="friend-avatar" src="<%= friend.siteLogo %>">
                                             <div class="flink-info">
-                                                <a href="<%= friend.siteLink %>" target="_blank"><%= friend.siteName %></a>
+                                                <% if(friend.siteLink == "/friendssq") { %> 
+                                                    <a href="<%= friend.siteLink %>" target="_Self"><%= friend.siteName %></a>
+                                                    <% } else { %>
+                                                        <a href="<%= friend.siteLink %>" target="_blank"><%= friend.siteName %></a> 
+                                                        <% } %>
+                                                        
+                                                <!--<a href="<%= friend.siteLink %>" target="_blank"><%= friend.siteName %></a>-->
                                                 <br />
                                                 <div class="flink-info-desc">
                                                     <%= friend.description %>
