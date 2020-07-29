@@ -6,8 +6,9 @@
 - 移动端页面适配。
 - 支持社交信息设置。
 - 支持谷歌统计。
-- 支持友链功能。
+- 支持友链功能。（感谢 [@renbaoshuo](https://github.com/renbaoshuo)）
 - 自定义 CSS 样式。
+- 文章搜索功能。（感谢 [@uiYzzi](https://github.com/uiYzzi)）
 
 ## 预览
 
