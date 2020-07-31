@@ -2,13 +2,6 @@
     padding: 32px;
     display: flex;
     flex-direction: column;
-    margin-left: 10%;
-    margin-right: 10%;
-
-    align-self: center;
-
-    max-width: 1000px;
-    min-width: 1000px;
 
     .year {
         font-size: 34px;
@@ -19,12 +12,15 @@
     }
 
     .post {
+        float:left;
         padding: 16px 0;
 
         .post-title {
+            float:left;
             font-size: 16px;
 
             small {
+                float:left;
                 font-size: 80%;
             }
         }
@@ -33,12 +29,6 @@
 
 @media (max-width: 600px) {
     .archives-container {
-        padding: 16px !important;
-    }
-}
-
-@media (max-width: 992px) {
-    .archives-container {
-        min-width: 0px !important;
+        padding: 16px;
     }
 }
