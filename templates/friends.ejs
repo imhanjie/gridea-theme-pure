@@ -5,14 +5,12 @@
 </head>
 
 <body>
-    <div class="main">
+<div class="main gt-bg-theme-color-first">
         <div class="main-content">
             <%- include('./includes/header') %>
             <div class="post-container">
-                <div class="post-detail gt-bg-theme-color-second">
-                    <article class="gt-post-content">
-                        <h2 class="post-title">友情链接</h2>
-
+                <div class="post-detail">
+                    <article>
                         <!-- <div class="post-content-wrapper"> -->
                             <div class="post-content">
                                 <div class="friends-desc">
@@ -24,15 +22,13 @@
                                         <div class="friend-box">
                                             <img class="friend-avatar" src="<%= friend.siteLogo %>">
                                             <div class="flink-info">
-                                                <% if(friend.siteLink == "/friendssq") { %> 
-                                                    <a href="<%= friend.siteLink %>" target="_Self"><%= friend.siteName %></a>
+                                                <% if(friend.siteLink == "/friendssq") { %>
+                                                    <a class="gt-c-content-color-first" href="<%= friend.siteLink %>" target="_Self"><%= friend.siteName %></a>
                                                     <% } else { %>
-                                                        <a href="<%= friend.siteLink %>" target="_blank"><%= friend.siteName %></a> 
+                                                        <a class="gt-c-content-color-first" href="<%= friend.siteLink %>" target="_blank"><%= friend.siteName %></a>
                                                         <% } %>
-                                                        
-                                                <!--<a href="<%= friend.siteLink %>" target="_blank"><%= friend.siteName %></a>-->
                                                 <br />
-                                                <div class="flink-info-desc">
+                                                <div class="flink-info-desc gt-c-content-color-first">
                                                     <%= friend.description %>
                                                 </div>
                                             </div>
