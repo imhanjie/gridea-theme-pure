@@ -1,0 +1,33 @@
+#gridea-search-container {
+    margin-left: 25px; margin-right: 7px;
+
+    .gridea-search-input {
+        height: 30px;
+        width: 200px;
+        box-sizing: border-box;
+        padding: 0 15px 0 30px;
+        border: 1px solid #e3e3e3;
+        border-radius: 15px;
+        color: #273849;
+        outline: none;
+        transition: border-color 0.2s ease;
+        background: #fff url(../media/images/search.png) 8px 5px no-repeat;
+        background-size: 20px;
+        vertical-align: middle !important;
+    }
+}
+
+@media (max-width: 992px) {
+    #gridea-search-container {
+        margin: 0px !important;
+        align-self: center;
+
+        .gridea-search-input {
+            margin-left: calc(50% - 100px);
+        }
+    }
+}
+
+.searching, .no-result {
+    text-align: center;
+}
