@@ -1,0 +1,36 @@
+#gridea-search-container {
+    margin-left: 25px; margin-right: 7px;
+
+    .search-input {
+      position: relative;
+      left: -2px;
+      width: 180px;
+      height: 30px;
+      padding: 0 0 2px 35px;
+      font-size: 12px;
+      background-size: 20px;
+      border: 0;
+      border-radius: 15px;
+      border-bottom-color: currentcolor;
+      border-bottom-style: none;
+      border-bottom-width: medium;
+      outline: 0;
+      border-bottom: 2px #495057;
+      transition: border-color .2s;
+    }
+}
+
+@media (max-width: 992px) {
+    #gridea-search-container {
+        margin: 0px !important;
+        align-self: center;
+
+        .gridea-search-input {
+            margin-left: calc(50% - 100px);
+        }
+    }
+}
+
+.searching, .no-result {
+    text-align: center;
+}

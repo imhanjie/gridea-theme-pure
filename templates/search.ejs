@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
-    <script src="<%= themeConfig.domain %>/media/gridea-search/fuse.basic.min.js"></script>
-    <script src="<%= themeConfig.domain %>/media/gridea-search/ejs.min.js"></script>
+    <%- include('./includes/head', { siteTitle: `搜索 - ${themeConfig.siteName}` }) %>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.0/dist/fuse.basic.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ejs@3.1.3/ejs.min.js"></script>
     <script src="<%= themeConfig.domain %>/media/gridea-search/gridea-search.js"></script>
     <script src="<%= themeConfig.domain %>/media/gridea-search/result-template.ejs" type="text/ejs"></script>
 </head>
@@ -13,24 +13,20 @@
     <style>
         .searched-keyword {
             background-color: yellow;
+            color: red;
         }
     </style>
-
-                <div class="main animated">
-                    <%- include('./includes/header') %>
-                    <div class="post-container">
-                        <div class="post-detail gt-bg-theme-color-second">
-                            <article class="gt-post-content">
-                                <h2 class="post-title">搜索结果</h2>
-                                <div class="post-content"></div>
-                    <div id="gridea-search-result" data-update="<%= site.utils.now %>">
-                        <div class="searching">搜索中......</div>
-                        <div class="no-result" style="display:none">未搜索到相关文章</div>
-                    </div>
-                </div>
-                    </div>
-                </div>
-            </article>
+    <div class="main animated">
+        <%- include('./includes/header') %>
+        <div id="gridea-search-result" data-update="<%= site.utils.now %>">
+            <div class="searching" style="font-size: 18px; margin-top: 50px;">
+                <i class="fa fa-sync-alt fa-spin"></i>&nbsp;&nbsp;搜索中......
+                <br><br>
+                <span style="font-size: 65%; color: #aaa">第一次搜索可能需要耗费较长时间构建索引，请耐心等待...</span>
+            </div>
+            <div class="no-result" style="display:none; font-size: 20px; margin-top: 50px;">
+                <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;未搜索到相关文章，请更换关键词
+            </div>
         </div>
     </div>
     <%- include('./includes/footer') %>

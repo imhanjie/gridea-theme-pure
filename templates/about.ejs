@@ -1,0 +1,44 @@
+<html lang="zh">
+<head>
+    <%- include('./includes/head', { siteTitle: `关于 - ${themeConfig.siteName}` }) %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <%- include('./includes/header') %>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h1 class="post-title">关于</h1>
+                <div class="post-content">
+                    <%- site.customConfig.about %>
+                </div>
+            </article>
+        </div>
+        <br>
+        <% if(site.customConfig['valine'] && site.customConfig['visitor']) { %>
+            <span id="/<%= post.link.split('/')[3] %>/" class="leancloud_visitors" data-flag-title="<%= post.title %>">
+                <em class="post-meta-item-text">阅读量 </em>
+                <i class="leancloud-visitors-count">0</i>
+            </span>
+        <% } %>
+
+        <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
+            <% if (commentSetting.commentPlatform === 'gitalk') { %>
+                <%- include('./includes/gitalk') %>
+            <% } %>
+            <% if (commentSetting.commentPlatform === 'disqus') { %>
+                <%- include('./includes/disqus') %>
+            <% } %>
+        <% } %>
+
+        <% if(typeof site.customConfig['valine']!=='undefined' && site.customConfig['valine']) { %>
+            <%- include('./includes/valine') %>
+        <% } %>
+
+
+        <%- include('./includes/footer') %>
+    </div>
+</div>
+</body>
+</html>
