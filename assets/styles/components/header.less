@@ -1,10 +1,27 @@
 .navbar {
-  padding: 38px 96px !important;
+  padding: 38px 96px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 
   .navbar-brand {
     display: flex;
     flex-direction: row;
     align-items: center;
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
 
     .user-avatar {
       width: 40px;
@@ -21,7 +38,12 @@
 
   .navbar-nav {
     width: 100%;
+    display: flex;
     justify-content: flex-end;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
 
     .nav-item {
       padding: 16px 32px;
@@ -38,6 +60,25 @@
     height: 22px;
   }
 
+  .navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+  }
+
+  .navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
 }
 
 
@@ -65,5 +106,31 @@
         margin-top: 35px;
       }
     }
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg {
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+
+    .navbar-nav {
+      flex-direction: row;
+    }
+
+    .navbar-collapse {
+      display: flex !important;
+      flex-basis: auto;
+    }
+
+    .navbar-toggler {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  #navbarSupportedContent {
+    display: none;
   }
 }
