@@ -12,7 +12,7 @@
                         </a>
                     </div>
                     <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <%- post.abstract %>
+                        <%- post.abstract.replace(/<[^>]+>/g,"") %>
                     </div>
                     <div class="post-info">
                         <time class="post-time gt-c-content-color-first">
