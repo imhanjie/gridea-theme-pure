@@ -1,5 +1,7 @@
 # Pure
 
+本主题另提供 Hexo 版本：[renbaoshuo/hexo-theme-pure](https://github.com/renbaoshuo/hexo-theme-pure)
+
 ## 介绍
 
 一款专为 Gridea 设计的主题，默认内置 「简约白」 「暗夜黑」 「银光灰」 「墨草绿」 4 种配色方案。另外还支持以下功能：
