@@ -15,6 +15,7 @@ app.set('view engine', 'ejs');
  */
 app.get('/', async (req, res) => {
     const response = await axios.get('https://raw.githubusercontent.com/getgridea/mock-json/master/list.json')
+    response.data.themeConfig.domain = ''
     res.render('index', {...response.data})
 })
 
@@ -23,6 +24,7 @@ app.get('/', async (req, res) => {
  */
 app.get('/post/:postName', async (req, res) => {
     const response = await axios.get('https://raw.githubusercontent.com/getgridea/mock-json/master/post.json')
+    response.data.themeConfig.domain = ''
     res.render('post', {...response.data})
 })
 
@@ -31,6 +33,7 @@ app.get('/post/:postName', async (req, res) => {
  */
 app.get('/archives', async (req, res) => {
     const response = await axios.get('https://raw.githubusercontent.com/getgridea/mock-json/master/archives.json')
+    response.data.themeConfig.domain = ''
     res.render('archives', {...response.data})
 })
 
@@ -39,6 +42,7 @@ app.get('/archives', async (req, res) => {
  */
 app.get('/tags', async (req, res) => {
     const response = await axios.get('https://raw.githubusercontent.com/getgridea/mock-json/master/tags.json')
+    response.data.themeConfig.domain = ''
     res.render('tags', {...response.data})
 })
 
@@ -47,6 +51,7 @@ app.get('/tags', async (req, res) => {
  */
 app.get('/tag/:tagName', async (req, res) => {
     const response = await axios.get('https://raw.githubusercontent.com/getgridea/mock-json/master/tag.json')
+    response.data.themeConfig.domain = ''
     res.render('tag', {...response.data})
 })
 

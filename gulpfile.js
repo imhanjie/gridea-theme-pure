@@ -2,10 +2,13 @@ const gulp = require('gulp')
 const nodemon = require('gulp-nodemon')
 const browserSync = require('browser-sync').create()
 const less = require('gulp-less')
+const header = require('gulp-header')
+const styleOverride = require('./style-override')
 
 gulp.task('less', () => {
   return gulp.src('./assets/styles/main.less')
     .pipe(less())
+    .pipe(header(styleOverride({ skin: 'gray' })))
     .pipe(gulp.dest('./styles'))
 })
 
@@ -16,9 +19,9 @@ gulp.task('copy_media', () => {
 
 gulp.task('gulp_nodemon', () => {
   nodemon({
-  script: 'app.js'                       // this is where my express server is
-  , ext: 'js html css ejs less'          // nodemon watches *.js, *.html, *.css, *.ejs, *.less files
-  , env: { 'NODE_ENV': 'development' }
+    script: 'app.js'                       // this is where my express server is
+    , ext: 'js html css ejs less'          // nodemon watches *.js, *.html, *.css, *.ejs, *.less files
+    , env: { 'NODE_ENV': 'development' }
   })
 })
 
@@ -42,6 +45,7 @@ gulp.task('sync', () => {
   ]).on('change', () => {
     return gulp.src('./assets/styles/main.less')
       .pipe(less())
+      .pipe(header(styleOverride({ skin: 'gray' })))
       .pipe(gulp.dest('./styles'))
   })
 

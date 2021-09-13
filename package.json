@@ -12,7 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.6.1",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "gulp-header": "^2.0.9"
   },
   "devDependencies": {
     "axios": "^0.18.0",
