@@ -21,3 +21,13 @@
 <script>
   hljs.highlightAll()
 </script>
+
+<script>
+window.onload = function () {
+  'use strict';
+  
+  var Viewer = window.Viewer;
+  var pictures = document.querySelector('.post-content');
+  var viewer = new Viewer(pictures);
+};
+</script>
