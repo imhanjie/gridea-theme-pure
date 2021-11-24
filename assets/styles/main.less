@@ -19,9 +19,9 @@ html {
 }
 
 body {
-  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, opensans, Optima, 'Microsoft Yahei', sans-serif;
-  font-size: 16px;
-  letter-spacing: 1.0382px;
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, opensans, Optima, 'Microsoft JhengHei', "Microsoft YaHei", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.05em;
 }
 
 button {
@@ -45,14 +45,14 @@ body, div, a, p, ul, li, ol, h1, h2, h3, h4, h5, h6, table, tr, td {
 ol {
   li {
     list-style: decimal;
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
 ul {
   li {
     list-style: disc;
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
@@ -79,11 +79,31 @@ hr {
 
 // 自定义 post 样式
 .gt-post-content {
+
+  .post-info {
+  	a {
+  		font-size: 12px;
+  		font-weight: normal !important;
+  		margin: 0px 0px 0px 10px;
+  		border: none;
+  	}
+  }
+
+  .post-content {
+  	a {
+  		color: #5e5e5e !important;
+  		font-size: 13px;
+  	}
+  }
+  
   word-break: normal;
   word-wrap: break-word;
 
   a {
     transition: all 0.3s;
+    border-bottom: 1px solid rgba(0,0,0,.26);
+    font-size: 14px;
+    font-weight: bold;
   }
 
   img {
@@ -94,14 +114,15 @@ hr {
   }
 
   p {
-    line-height: 1.725;
-    margin-bottom: 18px;
-    font-size: 16px;
-    letter-spacing: 1.0382px;
+    line-height: 1.62;
+    margin-bottom: 1.12em;
+    font-size: 15px;
+    letter-spacing: 0.05em;
   }
   
   b, strong{
-  	font-size: 15px;
+  	font-size: 13px;
+  	color: #252525;
   }
 
   em {
@@ -115,10 +136,10 @@ hr {
   }
 
   blockquote {
-    padding: 16px;
+    padding: 15px;
     border-left: 4px;
     border-style: solid;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
 
     p {
       margin-bottom: 0;
@@ -144,7 +165,7 @@ hr {
   ul, ol {
     padding-left: 20px;
     line-height: 1.725;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -170,7 +191,7 @@ hr {
   }
 
   h5 {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   h6 {
