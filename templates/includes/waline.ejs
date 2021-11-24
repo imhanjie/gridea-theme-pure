@@ -1,0 +1,24 @@
+<script src='https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
+
+<style>
+	div#waline{
+		width:<%=site.customConfig['vPercentWidth']%>%;
+		max-width: <%=site.customConfig['vMaxWidth']%>px;
+		padding: <%=site.customConfig['vPadding']%>
+	}
+</style>
+
+<% if(site.customConfig['waline']) { %>
+	<div id="waline"></div>
+<% } %>
+<script>
+	new Waline({
+		el: '#waline',
+		serverURL: '<%=site.customConfig['serverURL']%>',
+		avatar: '<%=site.customConfig['avatar']%>',
+		pageSize: <%=site.customConfig['pageSize']%>,
+		recordIp: <%=site.customConfig['recordIp']%>,
+		placeholder: '<%=site.customConfig['placeholder']%>',
+		visitor: <%=site.customConfig['visitor']%>,
+	});
+</script>

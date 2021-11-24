@@ -131,17 +131,17 @@
       "note": "链接地址"
     },
     {
-      "name": "valine",
-      "label": "是否开启valine评论系统",
-      "group": "valine评论系统",
+      "name": "waline",
+      "label": "是否开启waline评论系统",
+      "group": "waline评论系统",
       "type": "switch",
       "value": false,
-      "note": "启用valine评论系统，需先关闭Gridea自带的评论系统开关。"
+      "note": "启用waline评论系统，需先关闭Gridea自带的评论系统开关。"
     },
     {
       "name": "vPercentWidth",
       "label": "自定义百分比宽度",
-      "group": "valine评论系统",
+      "group": "waline评论系统",
       "type": "input",
       "value": "100",
       "note": "评论区域百分比宽度。单位：%"
@@ -149,39 +149,31 @@
     {
       "name": "vMaxWidth",
       "label": "自定义最大宽度",
-      "group": "valine评论系统",
+      "group": "waline评论系统",
       "type": "input",
       "value": "1000",
       "note": "评论区域最大宽度。单位：px"
     },
     {
       "name": "vPadding",
-      "label": "自定义valine评论容器的padding",
-      "group": "valine评论系统",
+      "label": "自定义waline评论容器的padding",
+      "group": "waline评论系统",
       "type": "input",
       "value": "2.5%",
       "note": "评论区域padding。请自行填写单位(%，px等)。"
     },
     {
-      "name": "APP_ID",
-      "label": "APP_ID",
-      "group": "valine评论系统",
+      "name": "serverURL",
+      "label": "Vercel部署后的地址",
+      "group": "waline评论系统",
       "type": "input",
       "value": "",
-      "note": "从Leancloud上获得的APP_ID"
-    },
-    {
-      "name": "APP_KEY",
-      "label": "APP_KEY",
-      "group": "valine评论系统",
-      "type": "input",
-      "value": "",
-      "note": "从Leancloud上获得的APP_KEY"
+      "note": "Vercel部署后的地址：your-domain.vercel.app"
     },
     {
       "name": "avatar",
       "label": "评论者头像",
-      "group": "valine评论系统",
+      "group": "waline评论系统",
       "value": "",
       "type": "select",
       "options": [
@@ -218,12 +210,12 @@
           "value": "hide"
         }
       ],
-      "note": "可在<a href='https://valine.js.org/avatar.html'>头像配置</a>页面查看详情"
+      "note": "可在<a href='https://waline.js.org/guide/client/avatar.html'>头像配置</a>页面查看详情"
     },
     {
       "name": "pageSize",
       "label": "每页展示的评论条数",
-      "group": "valine评论系统",
+      "group": "waline评论系统",
       "type": "select",
       "value": "5",
       "options": [
@@ -244,7 +236,7 @@
     {
       "name": "recordIp",
       "label": "记录评论者IP",
-      "group": "valine评论系统",
+      "group": "waline评论系统",
       "type": "switch",
       "value": false,
       "note": "是否记录评论者IP"
@@ -252,7 +244,7 @@
     {
       "name": "visitor",
       "label": "记录文章访问量",
-      "group": "valine评论系统",
+      "group": "waline评论系统",
       "type": "switch",
       "value": false,
       "note": "是否记录文章访问量"
@@ -260,7 +252,7 @@
     {
       "name": "placeholder",
       "label": "占位提示符",
-      "group": "valine评论系统",
+      "group": "waline评论系统",
       "type": "input",
       "value": "Just Go Go",
       "note": "评论区占位提示符"
