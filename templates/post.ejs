@@ -41,7 +41,7 @@
         <% } %>
 
         <% if(site.customConfig['waline'] && site.customConfig['visitor']) { %>
-            <div id="/<%= post.link.split('/')[3] + '/' + post.link.split('/')[4] %>/" class="leancloud_visitors" data-flag-title="<%= post.title %>">
+            <div id="/<%= post.link.split('/')[3] + '/' + post.link.split('/')[4] %>/" class="leancloud_visitors" style="visibility:collapse" data-flag-title="<%= post.title %>">
             	当前文章阅读量为<span id="/<%= post.link.split('/')[3] + '/' + post.link.split('/')[4] %>/"
                 class="waline-visitor-count leancloud-visitors-count">0</span>次
             </div>
@@ -64,6 +64,22 @@
         <%- include('./includes/footer') %>
         <%- include('./includes/highlight-load') %>
         <%- include('./includes/viewjs-load') %>
+
+        <script>
+            var ele = document.querySelector(".waline-visitor-count");
+            Object.defineProperty(ele, 'innerText', {
+                get: function() {
+                    return ele.innerText;
+                },
+                set: function(value) {
+                    ele.innerHTML = value;
+                    if (value > 0) {
+	                    var parent = document.querySelector(".leancloud_visitors");
+	                    parent.style.visibility="visible";
+	                }
+                }
+            });
+        </script>
     </div>
 </div>
 </body>
