@@ -36,7 +36,7 @@
 </nav>
 <script>
     /* 移动端导航栏展开/收起切换 */
-    document.getElementById('changeNavbar').onclick = () => {
+    document.getElementById('changeNavbar').onclick = function () {
         var element = document.getElementById('navbarSupportedContent');
         if (element.style.display === 'none' || element.style.display === '') {
             element.style.display = 'block';
