@@ -222,9 +222,17 @@
         searchByPhrase(resultHandler);
     }
 
+    function addEventListener(element, type, handler) {
+        if (element.addEventListener) {
+            element.addEventListener(type, handler, false);
+        } else if (element.attachEvent) {
+            element.attachEvent('on' + type, handler);
+        }
+    }
+
     //页面加载完执行
-    window.onload = function () {
+    addEventListener(window, 'load', function () {
         fillSearchInput();
         grideaSearch();
-    }
+    });
 })();

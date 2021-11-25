@@ -1,6 +1,9 @@
 <html lang="zh">
 <head>
     <%- include('./includes/head', { siteTitle: `关于 - ${themeConfig.siteName}` }) %>
+    <%- include('./includes/highlight') %>
+    <%- include('./includes/meimaid') %>
+    <%- include('./includes/viewjs') %>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
 </head>
 <body>
@@ -30,6 +33,8 @@
 
 
         <%- include('./includes/footer') %>
+        <%- include('./includes/highlight-load') %>
+        <%- include('./includes/viewjs-load') %>
     </div>
 </div>
 </body>
