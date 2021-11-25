@@ -183,9 +183,18 @@
         for (var i = 0; i < searchedContent.matches.length; i++) {
             if (searchedContent.matches[i].key === 'content') {//如果匹配到文章内容，截取关键字
                 var indices = searchedContent.matches[i].indices[0];
-                var beforeKeyword = searchedPostContent.substring(indices[0] - 20, indices[0]);//关键字前10字
-                var keyword = searchedPostContent.substring(indices[0], indices[1] + 1);//关键字
-                var afterKeyword = searchedPostContent.substring(indices[1] + 1, indices[1] + 120);//关键字后70字
+                
+                var startIndex = indices[0];
+                var endIndex = indices[1];
+                //IE11 的奇怪问题, indices为什么必须使用二维数组方式访问？
+                if (typeof(endIndex) === 'undefined' || Array.isArray(endIndex)) {
+                    startIndex = indices[0][0];
+                    endIndex = indices[0][1];
+                }
+
+                var beforeKeyword = searchedPostContent.substring(startIndex - 20, startIndex);//关键字前20字
+                var keyword = searchedPostContent.substring(startIndex, endIndex + 1);//关键字
+                var afterKeyword = searchedPostContent.substring(endIndex + 1, endIndex + 120);//关键字后120字
                 preview = beforeKeyword + '<span class="searched-keyword">'
                     + keyword + '</span>' + afterKeyword;
             } else {//没有匹配到文章内容，则是标题，直接截取前80字

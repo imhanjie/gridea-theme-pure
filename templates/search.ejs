@@ -4,7 +4,7 @@
 <head>
     <%- include('./includes/head', { siteTitle: `搜索 | ${themeConfig.siteName}` }) %>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/ejs@3.1.3/ejs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ejs@3.1.6/ejs.min.js"></script>
     <script src="<%= themeConfig.domain %>/media/gridea-search/gridea-search.js"></script>
     <script src="<%= themeConfig.domain %>/media/gridea-search/result-template.ejs" type="text/ejs"></script>
 </head>
@@ -12,8 +12,13 @@
 <body>
     <style>
         .searched-keyword {
-            background-color: yellow;
-            color: red;
+            font-weight: bold;
+            color: black;
+            text-decoration: underline;
+        }
+
+        .gt-c-content-color-second p {
+            color: #757575;
         }
     </style>
     <div class="main gt-bg-theme-color-first">
