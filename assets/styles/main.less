@@ -1,6 +1,8 @@
-@import './lib/modern-normalize';
-@import './lib/colors';
-@import './abstracts/varibles';
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.min.css);
+
+@import "./lib/modern-normalize";
+@import "./lib/colors";
+@import "./abstracts/varibles";
 
 *,
 *:before,
@@ -9,7 +11,87 @@
   padding: 0;
 }
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   border: 0;
   vertical-align: baseline;
 }
@@ -19,9 +101,19 @@ html {
 }
 
 body {
-  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, opensans, Optima, 'Microsoft JhengHei', "Microsoft YaHei", sans-serif;
-  font-size: 15px;
+  font-family: "Fira Code", Menlo, Monaco, Consolas, "Courier New",
+    "PingFang SC", -apple-system, BlinkMacSystemFont, opensans, Optima,
+    "Microsoft JhengHei", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
   letter-spacing: 0.05em;
+}
+
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: "Fira Code VF", Menlo, Monaco, Consolas, "Courier New",
+      "PingFang SC", -apple-system, BlinkMacSystemFont, opensans, Optima,
+      "Microsoft JhengHei", "Microsoft YaHei", sans-serif;
+  }
 }
 
 button {
@@ -36,7 +128,22 @@ a {
   //}
 }
 
-body, div, a, p, ul, li, ol, h1, h2, h3, h4, h5, h6, table, tr, td {
+body,
+div,
+a,
+p,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+table,
+tr,
+td {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -45,14 +152,14 @@ body, div, a, p, ul, li, ol, h1, h2, h3, h4, h5, h6, table, tr, td {
 ol {
   li {
     list-style: decimal;
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 
 ul {
   li {
     list-style: disc;
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 
@@ -79,31 +186,28 @@ hr {
 
 // 自定义 post 样式
 .gt-post-content {
-
   .post-info {
-  	a {
-  		font-size: 12px;
-  		font-weight: normal !important;
-  		margin: 0px 0px 0px 10px;
-  		border: none;
-  	}
+    a {
+      font-size: 12px;
+      font-weight: normal !important;
+      margin: 0px 0px 0px 10px;
+      border: none;
+    }
   }
 
   .post-content {
-  	a {
-  		color: #5e5e5e !important;
-  		font-size: 13px;
-  	}
+    a {
+      color: #5e5e5e !important;
+      font-weight: 500;
+    }
   }
-  
+
   word-break: normal;
   word-wrap: break-word;
 
   a {
     transition: all 0.3s;
-    border-bottom: 1px solid rgba(0,0,0,.26);
-    font-size: 14px;
-    font-weight: bold;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.26);
   }
 
   img {
@@ -114,20 +218,20 @@ hr {
   }
 
   p {
-    line-height: 1.62;
-    margin-bottom: 1.12em;
-    font-size: 15px;
-    letter-spacing: 0.05em;
+    line-height: 1.75em;
+    margin-bottom: 1.25em;
+    font-size: 16px;
+    letter-spacing: 0.06em;
   }
-  
-  b, strong{
-  	font-size: 13px;
-  	color: #252525;
+
+  b,
+  strong {
+    font-weight: 500;
   }
 
   em {
     strong {
-      font-size: 13px !important;
+      font-size: 16px !important;
     }
   }
 
@@ -136,10 +240,10 @@ hr {
   }
 
   blockquote {
-    padding: 15px;
+    padding: 16px;
     border-left: 4px;
     border-style: solid;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 
     p {
       margin-bottom: 0;
@@ -157,57 +261,73 @@ hr {
     border-top: 1px solid #dfe2e5;
   }
 
-  td, th {
+  td,
+  th {
     border: 1px solid #dfe2e5;
-    padding: .6em 1em;
+    padding: 0.6em 1em;
   }
 
-  ul, ol {
+  ul,
+  ol {
     padding-left: 20px;
     line-height: 1.725;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin-bottom: 18px;
     padding-top: 14px;
     font-weight: bold;
   }
 
   h1 {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   h2 {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   h4 {
-    font-size: 18px;
+    font-size: 22px;
   }
 
   h5 {
-    font-size: 15px;
+    font-size: 20px;
   }
 
   h6 {
-    font-size: 14px;
+    font-size: 18px;
   }
 
-  p, li {
+  p,
+  li {
     code {
       padding: 0 6px;
       margin: 0 3px;
       font-size: 14px;
+      font-family: "Fira Code", Menlo, Monaco, Consolas, "Courier New",
+        monospace;
       border-radius: 4px;
-      display: inline-block;
-      font-weight: bold;
+      font-weight: 500;
       word-break: break-all;
       overflow-wrap: anywhere;
+    }
+
+    @supports (font-variation-settings: normal) {
+      code {
+        font-family: "Fira Code VF", Menlo, Monaco, Consolas, "Courier New",
+          monospace;
+      }
     }
   }
 
@@ -215,8 +335,10 @@ hr {
     margin-bottom: 18px;
 
     code {
-      font-size: 13px;
-      font-family: Menlo, Monaco, 'Source Code Pro', Consolas, 'Courier New', monospace;
+      font-size: 14px;
+      font-family: "Fira Code", Menlo, Monaco, Consolas, "Courier New",
+        "PingFang SC", -apple-system, BlinkMacSystemFont, opensans, Optima,
+        "Microsoft JhengHei", "Microsoft YaHei", sans-serif;
       padding: 1em;
       border-radius: 5px;
       line-height: 1.375;
@@ -224,12 +346,20 @@ hr {
       overflow: auto;
       display: block;
     }
+
+    @supports (font-variation-settings: normal) {
+      code {
+        font-family: "Fira Code VF", Menlo, Monaco, Consolas, "Courier New",
+          "PingFang SC", -apple-system, BlinkMacSystemFont, opensans, Optima,
+          "Microsoft JhengHei", "Microsoft YaHei", sans-serif;
+      }
+    }
   }
 
   kbd {
-    margin: 0 .1em;
-    padding: 0 .6em;
-    font-size: .75em;
+    margin: 0 0.1em;
+    padding: 0 0.6em;
+    font-size: 0.85em;
     background: #fff;
     border: 1px solid #adb3b9;
     border-radius: 3px;
@@ -268,5 +398,5 @@ hr {
 @import "./components/footer.less";
 @import "./components/friends.less";
 @import "./components/search.less";
-@import "./lib/highlight.less";
-@import "./lib/katex.less";
+//@import "./lib/highlight.less";
+//@import "./lib/katex.less";

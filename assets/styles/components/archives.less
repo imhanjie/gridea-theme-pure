@@ -1,34 +1,35 @@
 .archives-container {
-    padding: 32px;
-    display: flex;
-    flex-direction: column;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
 
-    .year {
-        font-size: 34px;
-        font-weight: bold;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        align-self: start;
+  .year {
+    font-size: 34px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    align-self: start;
+  }
+
+  .post {
+    float: left;
+    margin: 1em 0 1em 2em;
+
+    .post-title {
+      float: left;
+      font-size: 16px;
+      text-align: right;
+
+      small {
+        float: left;
+        font-size: 80%;
+      }
     }
-
-    .post {
-        float:left;
-        padding: 15px 0;
-
-        .post-title {
-            float:left;
-            font-size: 15px;
-
-            small {
-                float:left;
-                font-size: 80%;
-            }
-        }
-    }
+  }
 }
 
 @media (max-width: 600px) {
-    .archives-container {
-        padding: 15px;
-    }
+  .archives-container {
+    padding: 15px;
+  }
 }
