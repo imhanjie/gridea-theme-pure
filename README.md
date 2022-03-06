@@ -53,3 +53,8 @@
 
 - [Gridea - 一个静态博客写作客户端](https://gridea.dev/)
 - [gridea-theme-starter](https://github.com/getgridea/gridea-theme-starter)
+
+## 维护者
+
+- [@imhanjie](https://github.com/imhanjie)
+- [@renbaoshuo](https://github.com/renbaoshuo)
