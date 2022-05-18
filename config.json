@@ -131,6 +131,14 @@
       "note": "链接地址"
     },
     {
+      "name": "bilibili",
+      "label": "哔哩哔哩",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
       "name": "valine",
       "label": "是否开启valine评论系统",
       "group": "valine评论系统",
