@@ -56,13 +56,16 @@
         var options = {
             includeMatches: true,
             ignoreLocation: true,
+            ignoreFieldNorm: true,
+            useExtendedSearch: true,
+            threshold: 0,
             keys: [
                 'title',
                 'content'
-            ]
+            ],
         };
         var fuse = new Fuse(data, options);
-        var fuzzyResult = fuse.search(phrase);
+        var fuzzyResult = fuse.search('\'' + phrase);
         return fuzzyResult;
     } 
 
