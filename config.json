@@ -274,6 +274,14 @@
       "note": ""
     },
     {
+      "name": "mermaid",
+      "label": "是否开启 Mermaid 流程图支持",
+      "group": "杂项",
+      "type": "switch",
+      "value": false,
+      "note": ""
+    },
+    {
       "name": "ga",
       "label": "跟踪 ID",
       "group": "谷歌统计",
