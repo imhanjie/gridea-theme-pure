@@ -2,6 +2,10 @@
 <head>
     <%- include('./includes/head', { siteTitle: `${post.title} | ${themeConfig.siteName}` }) %>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+    <% if (site.customConfig.mermaid) { %>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@9.1.1/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script> 
+    <% } %>
 </head>
 <body>
 <div class="main gt-bg-theme-color-first">

@@ -21,11 +21,6 @@
 <!-- DEMO JS -->
 <!--<script src="media/scripts/index.js"></script>-->
 
-<% if (site.customConfig.mermaid) { %>
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@9.1.1/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script> 
-<% } %>
-
 <% if (site.customConfig.ga) { %>
 <script async src="https://www.googletagmanager.com/gtag/js?id=<%= site.customConfig.ga %>"></script>
 <script>
