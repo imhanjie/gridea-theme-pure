@@ -4,7 +4,9 @@
     <%- include('./includes/highlight') %>
     <%- include('./includes/meimaid') %>
     <%- include('./includes/viewjs') %>
-    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+    <script src="https://fastly.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
 </head>
 <body>
 <div class="main gt-bg-theme-color-first">
@@ -40,10 +42,9 @@
             </div>
         <% } %>
 
-        <% if(site.customConfig['waline'] && site.customConfig['visitor']) { %>
+        <% if(site.customConfig['waline'] && site.customConfig['pageview']) { %>
             <div id="/<%= post.link.split('/')[3] + '/' + post.link.split('/')[4] %>/" class="leancloud_visitors" style="visibility:collapse" data-flag-title="<%= post.title %>">
-            	当前文章阅读量为<span id="/<%= post.link.split('/')[3] + '/' + post.link.split('/')[4] %>/"
-                class="waline-visitor-count leancloud-visitors-count">0</span>次
+            	当前文章阅读量为 <span id="/<%= post.link.split('/')[3] + '/' + post.link.split('/')[4] %>/" class="waline-pageview-count leancloud-visitors-count">0</span> 次
             </div>
         <% } %>
 
@@ -66,7 +67,7 @@
         <%- include('./includes/viewjs-load') %>
 
         <script>
-            var ele = document.querySelector(".waline-visitor-count");
+            var ele = document.querySelector(".waline-pageview-count");
             Object.defineProperty(ele, 'innerText', {
                 get: function() {
                     return ele.innerText;

@@ -1,25 +1,41 @@
-<script src='https://fastly.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
+<link href='https://fastly.jsdelivr.net/npm/@waline/client@v2/dist/waline.css' rel='stylesheet' />
+<script src='https://fastly.jsdelivr.net/npm/@waline/client@v2/dist/waline.js'></script>
 
 <style>
 	div#waline{
 		width:<%=site.customConfig['vPercentWidth']%>%;
 		max-width: <%=site.customConfig['vMaxWidth']%>px;
-		padding: <%=site.customConfig['vPadding']%>
+		padding: <%=site.customConfig['vPadding']%>;
 	}
+	span.katex { font-size: 20px; };
 </style>
 
 <% if(site.customConfig['waline']) { %>
 	<div id="waline"></div>
 <% } %>
 <script>
-	new Waline({
+	Waline.init({
 		el: '#waline',
-		login: 'disable',
+		login: 'enable',
+		imageUploader: false,
 		serverURL: '<%=site.customConfig['serverURL']%>',
-		avatar: '<%=site.customConfig['avatar']%>',
 		pageSize: <%=site.customConfig['pageSize']%>,
 		recordIp: <%=site.customConfig['recordIp']%>,
-		placeholder: '<%=site.customConfig['placeholder']%>',
-		visitor: <%=site.customConfig['visitor']%>,
+		pageview: <%=site.customConfig['pageview']%>,
+		commentSorting: '<%=site.customConfig['commentSorting']%>',
+		emoji: [
+				'//fastly.jsdelivr.net/npm/@waline/emojis/qq',
+				'//fastly.jsdelivr.net/npm/@waline/emojis/tw-emoji'
+		],
+		highlighter: function(code, lang) {
+			return hljs.highlight(code, {language: lang}).value;
+		},
+		texRenderer: function(blockMode, tex) {
+			var str = katex.renderToString(tex, {
+				displayMode: blockMode,
+				throwOnError: false,
+			});
+			return str;
+		}
 	});
 </script>

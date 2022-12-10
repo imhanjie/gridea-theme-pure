@@ -132,16 +132,16 @@
     },
     {
       "name": "waline",
-      "label": "是否开启waline评论系统",
-      "group": "waline评论系统",
+      "label": "是否开启Waline评论系统",
+      "group": "Waline评论系统",
       "type": "switch",
       "value": false,
-      "note": "启用waline评论系统，需先关闭Gridea自带的评论系统开关。"
+      "note": "启用Waline评论系统，需先关闭Gridea自带的评论系统开关。"
     },
     {
       "name": "vPercentWidth",
       "label": "自定义百分比宽度",
-      "group": "waline评论系统",
+      "group": "Waline评论系统",
       "type": "input",
       "value": "100",
       "note": "评论区域百分比宽度。单位：%"
@@ -149,15 +149,15 @@
     {
       "name": "vMaxWidth",
       "label": "自定义最大宽度",
-      "group": "waline评论系统",
+      "group": "Waline评论系统",
       "type": "input",
       "value": "1000",
       "note": "评论区域最大宽度。单位：px"
     },
     {
       "name": "vPadding",
-      "label": "自定义waline评论容器的padding",
-      "group": "waline评论系统",
+      "label": "自定义Waline评论容器的padding",
+      "group": "Waline评论系统",
       "type": "input",
       "value": "2.5%",
       "note": "评论区域padding。请自行填写单位(%，px等)。"
@@ -165,57 +165,15 @@
     {
       "name": "serverURL",
       "label": "Vercel部署后的地址",
-      "group": "waline评论系统",
+      "group": "Waline评论系统",
       "type": "input",
       "value": "",
       "note": "Vercel部署后的地址：your-domain.vercel.app"
     },
     {
-      "name": "avatar",
-      "label": "评论者头像",
-      "group": "waline评论系统",
-      "value": "",
-      "type": "select",
-      "options": [
-        {
-          "label": "Gravatar官方图形",
-          "value": ""
-        },
-        {
-          "label": "神秘人(一个灰白头像)",
-          "value": "mp"
-        },
-        {
-          "label": "抽象几何图形",
-          "value": "identicon"
-        },
-        {
-          "label": "小怪物",
-          "value": "monsterid"
-        },
-        {
-          "label": "用不同面孔和背景组合生成的头像",
-          "value": "wavatar"
-        },
-        {
-          "label": "八位像素复古头像",
-          "value": "retro"
-        },
-        {
-          "label": "一种具有不同颜色、面部等的机器人",
-          "value": "robohash"
-        },
-        {
-          "label": "不显示头像",
-          "value": "hide"
-        }
-      ],
-      "note": "可在<a href='https://waline.js.org/guide/client/avatar.html'>头像配置</a>页面查看详情"
-    },
-    {
       "name": "pageSize",
       "label": "每页展示的评论条数",
-      "group": "waline评论系统",
+      "group": "Waline评论系统",
       "type": "select",
       "value": "5",
       "options": [
@@ -236,26 +194,39 @@
     {
       "name": "recordIp",
       "label": "记录评论者IP",
-      "group": "waline评论系统",
+      "group": "Waline评论系统",
       "type": "switch",
       "value": false,
       "note": "是否记录评论者IP"
     },
     {
-      "name": "visitor",
+      "name": "pageview",
       "label": "记录文章访问量",
-      "group": "waline评论系统",
+      "group": "Waline评论系统",
       "type": "switch",
-      "value": false,
+      "value": true,
       "note": "是否记录文章访问量"
     },
     {
-      "name": "placeholder",
-      "label": "占位提示符",
-      "group": "waline评论系统",
-      "type": "input",
-      "value": "Just Go Go",
-      "note": "评论区占位提示符"
+      "name": "commentSorting",
+      "label": "评论排序方式",
+      "group": "Waline评论系统",
+      "type": "select",
+      "value": "hottest",
+      "options": [
+        {
+          "label": "latest",
+          "value": "latest"
+        },
+        {
+          "label": "oldest",
+          "value": "oldest"
+        },
+        {
+          "label": "hottest",
+          "value": "hottest"
+        }
+      ]
     },
     {
       "name": "customCss",
