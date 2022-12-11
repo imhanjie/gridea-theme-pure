@@ -7,7 +7,11 @@
 		max-width: <%=site.customConfig['vMaxWidth']%>px;
 		padding: <%=site.customConfig['vPadding']%>;
 	}
-	span.katex { font-size: 20px; };
+	
+	span.katex { font-size: 20px; }
+	
+	.wl-emoji-popup { font-size: 16px !important; }
+	.wl-emoji-popup button { height: 2em; }
 </style>
 
 <% if(site.customConfig['waline']) { %>
@@ -18,6 +22,7 @@
 		el: '#waline',
 		login: 'enable',
 		imageUploader: false,
+		search: false,
 		serverURL: '<%=site.customConfig['serverURL']%>',
 		pageSize: <%=site.customConfig['pageSize']%>,
 		recordIp: <%=site.customConfig['recordIp']%>,
